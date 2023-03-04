@@ -1,0 +1,106 @@
+// Variables
+
+$base-color: #6e6e72;
+$base-dark: rgba($base-color, 0.7);
+$font: "Open Sans", sans-serif;
+
+//
+
+@mixin global-flex {
+  display: flex;
+  flex-wrap: wrap;
+  place-items: center;
+}
+
+@mixin global-border {
+  border: 1px solid white;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.atp-box {
+  @include global-border;
+  display: inline-block;
+}
+
+body {
+  font-family: $font;
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  @include global-flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 100px;
+}
+
+.centered {
+  text-align: center;
+  margin: 2.3rem;
+  display: block;
+}
+
+a,
+a:focus,
+a:hover,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  height: 70px;
+}
+
+main {
+  min-height: 70vh;
+  box-shadow: 1px 2px 8px grey;
+  background-color: $base-color;
+  @include global-flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.st-letter {
+  font-size: 14px;
+  font-weight: bold;
+  @include global-border;
+  padding: 1rem 1.2rem;
+  text-transform: uppercase;
+  margin: 1px;
+}
+
+button {
+  margin: 1rem;
+  background-color: transparent;
+  color: white;
+  @include global-border;
+  letter-spacing: 1.5px;
+  transition: 0.3s ease-in-out;
+  &:hover,
+  &:focus {
+    background-color: rgb(13, 13, 13);
+    border-color: rgb(13, 13, 13);
+  }
+}
+
+.keyboard {
+  max-width: 250px;
+  justify-content: center;
+  @include global-flex;
+}
+
+.keys {
+  border-style: none;
+  border-radius: 0.5rem;
+  background-color: #818384;
+  color: #ece8e8;
+  margin: 1px 1px 5px;
+  padding: 10px 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: "Helvetica Neue";
+}

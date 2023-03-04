@@ -1,0 +1,97 @@
+.atp-box {
+  border: 1px solid white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  place-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 100px;
+}
+
+.centered {
+  text-align: center;
+  margin: 2.3rem;
+  display: block;
+}
+
+a,
+a:focus,
+a:hover,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  height: 70px;
+}
+
+main {
+  min-height: 70vh;
+  box-shadow: 1px 2px 8px grey;
+  background-color: #6e6e72;
+  display: flex;
+  flex-wrap: wrap;
+  place-items: center;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.st-letter {
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  text-transform: uppercase;
+  margin: 1px;
+}
+
+button {
+  margin: 1rem;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  letter-spacing: 1.5px;
+  transition: 0.3s ease-in-out;
+}
+button:hover, button:focus {
+  background-color: rgb(13, 13, 13);
+  border-color: rgb(13, 13, 13);
+}
+
+.keyboard {
+  max-width: 250px;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  place-items: center;
+}
+
+.keys {
+  border-style: none;
+  border-radius: 0.5rem;
+  background-color: #818384;
+  color: #ece8e8;
+  margin: 1px 1px 5px;
+  padding: 10px 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: "Helvetica Neue";
+}/*# sourceMappingURL=App.css.map */
