@@ -8,6 +8,20 @@ import "./sass/App.css";
 
 export default function App() {
   const [myWord, setMyWord] = useState(" ");
+  const [myArray, setMyArray] = useState([]);
+  const [compareArray, setCompareArray] = useState([]);
+
+  const handleKey = (key) => {
+    if (key === "ENTER") {
+      console.log("confirm if the word is correct! ");
+    } else if (key === "DEL") {
+      console.log("delete letter from word! ");
+    } else console.log("key: " + key);
+  };
+
+  function giveMeHint() {
+    console.log("share a hint with the player");
+  }
 
   return (
     <div>
@@ -16,7 +30,16 @@ export default function App() {
         <h3>.react | sass.</h3>
       </header>
       <main>
-        <Context.Provider value={{ myWord, setMyWord }}>
+        <Context.Provider
+          value={{
+            myWord,
+            setMyWord,
+            handleKey,
+            myArray,
+            setMyArray,
+            giveMeHint,
+          }}
+        >
           <StartGame />
           <RenderGuessWord />
           <Keyboard />

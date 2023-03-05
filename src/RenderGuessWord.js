@@ -1,9 +1,9 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { Context } from "./Context";
 
 export default function RenderGuessWord() {
-  const { myWord, setMyWord } = useContext(Context);
-  const [myArray, setMyArray] = useState([]);
+  const { myWord, handleKey, myArray, setMyArray, giveMeHint } =
+    useContext(Context);
   const attemptsLeft = 5;
 
   useEffect(() => {
@@ -20,7 +20,8 @@ export default function RenderGuessWord() {
         ))}
       </span>
       <span className="centered">
-        <button>CHECK</button> <button>I NEED A HINT</button>
+        <button onClick={() => handleKey("ENTER")}>CHECK</button>
+        <button onClick={() => giveMeHint()}>I NEED A HINT</button>
         <br />
         <h3 className="atp-box">{attemptsLeft} attempts left</h3>
       </span>

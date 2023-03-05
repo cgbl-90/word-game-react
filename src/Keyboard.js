@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Context } from "./Context";
 
 function Keyboard() {
+  const { handleKey } = useContext(Context);
   const keysArray = [
     "Q",
     "W",
@@ -29,12 +31,16 @@ function Keyboard() {
     "N",
     "M",
     "DEL",
-    "CHECK",
   ];
+
   return (
     <div className="keyboard">
       {keysArray.map((lett, index) => (
-        <button id={`${index}${lett}`} className={`keys ${lett}`}>
+        <button
+          id={`${index}${lett}`}
+          className={`keys ${lett}`}
+          onClick={() => handleKey(lett)}
+        >
           {lett}
         </button>
       ))}
